@@ -22,7 +22,7 @@ export default function Products() {
           <div className="text-center sm:text-left">
             <h1 className="text-3xl font-bold text-gray-900 sm:text-3xl">All Products</h1>
 
-            <p className="mt-1.5 text-md text-gray-500 max-w-lg">Let's create a new product! 🎉</p>
+            <p className="mt-1.5 text-md text-gray-500 max-w-lg">Let us create a new product! 🎉</p>
           </div>
 
           <div className="mt-4 flex flex-col gap-4 sm:mt-0 sm:flex-row sm:items-center">

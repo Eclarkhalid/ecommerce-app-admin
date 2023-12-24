@@ -4,7 +4,7 @@ export default function NewProduct() {
   return <>
     <div className="p-4 text-center max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <p className="mt-1.5 text-md text-gray-500 max-w-lg">Let's create a new product! 🎉</p>
+      <p className="mt-1.5 text-md text-gray-500 max-w-lg">Let us create a new product! 🎉</p>
 
 
     </div>

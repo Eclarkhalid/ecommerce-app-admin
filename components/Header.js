@@ -7,7 +7,7 @@ export default function Header() {
   const { data: session } = useSession()
 
   const router = useRouter();
-  const {pathname} = router;
+  const { pathname } = router;
 
   const active = 'text-green-600 transition hover:text-green-500/75 p-3 bg-gray-200 rounded-md'
   const inactive = 'text-gray-500 transition hover:text-gray-500/75 p-3'
@@ -18,7 +18,7 @@ export default function Header() {
         <div className=" lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="flex-1 md:flex md:items-center md:gap-12">
-              <a className="block text-teal-600" href="/">
+              <Link className="block text-teal-600" href="/">
                 <span className="sr-only">Home</span>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
@@ -47,9 +47,9 @@ export default function Header() {
 
                   <li>
                     <Link className={location.pathname === '/settings' ? active : inactive} href="/settings"> Settings </Link>
-                  </li> 
+                  </li>
 
-                  
+
                 </ul>
               </nav>
 
