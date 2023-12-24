@@ -5,6 +5,7 @@ import Spinner from "./Spinner";
 
 import { ReactSortable } from "react-sortablejs";
 import toast from "react-hot-toast";
+import Link from "next/link";
 
 export default function Product({
   _id,
