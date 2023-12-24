@@ -4,15 +4,22 @@ import { useState } from "react";
 import Spinner from "./Spinner";
 
 import { ReactSortable } from "react-sortablejs";
+import toast from "react-hot-toast";
 
-export default function Product() {
+export default function Product({
+  _id,
+  title: existingTitle,
+  description: existingDescription,
+  price: existingPrice,
+  images: existingImages
+}) {
   const [redirect, setRedirect] = useState(false);
   const router = useRouter();
 
-  const [title, setTittle] = useState('');
-  const [description, setDescription] = useState('');
-  const [price, setPrice] = useState('');
-  const [images, setImages] = useState([]);
+  const [title, setTittle] = useState(existingTitle || '');
+  const [description, setDescription] = useState(existingDescription || '');
+  const [price, setPrice] = useState(existingPrice || '');
+  const [images, setImages] = useState(existingImages || []);
 
   const [isUploading, setIsUploading] = useState(false)
 
@@ -26,7 +33,13 @@ export default function Product() {
     }
 
     const data = { title, description, price, images };
-    await axios.post('/api/products', data);
+    if (_id) {
+      await axios.put('/api/products', { ...data, _id});
+      toast.success('Product Updated')
+    } else {
+      await axios.post('/api/products', data);
+      toast.success('Product Created!!')
+    }
 
     setRedirect(true);
   };

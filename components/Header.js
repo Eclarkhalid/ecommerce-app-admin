@@ -46,7 +46,7 @@ export default function Header() {
                   </li>
 
                   <li>
-                    <Link className={location.pathname === '/settings' ? active : inactive} href="/"> Settings </Link>
+                    <Link className={location.pathname === '/settings' ? active : inactive} href="/settings"> Settings </Link>
                   </li> 
 
                   
